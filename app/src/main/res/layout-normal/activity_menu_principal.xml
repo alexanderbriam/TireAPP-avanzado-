@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.garket.tireapp.MenuPrincipal">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@+id/HeaderIngreso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:weightSum="1"
+        android:background="#000000"
+        android:paddingTop="0dp"
+        android:paddingEnd="50dp"
+        android:paddingStart="50dp"
+        android:padding="0dp"
+        android:paddingRight="0dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:id="@+id/imageView"
+            android:background="@drawable/cabecera"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/FormIngreso"
+        android:paddingLeft="20.0dip"
+        android:paddingRight="20.0dip"
+        android:paddingTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/Footer"
+        android:layout_below="@+id/HeaderIngreso">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/LinearLayoutUsuario"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:textColor="@color/blanco"
+                android:layout_gravity="center"
+                android:id="@+id/buttonCracionNeumatico"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dip"
+                android:text="Creación de Neumático"
+                android:onClick="PruebaEquipo"
+                android:background="#000000"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/LinearLayoutContrasena"
+            android:paddingTop="5.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:textColor="@color/blanco"
+                android:layout_gravity="center"
+                android:id="@+id/buttonCreacioncamion"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dip"
+                android:text="Creación de Camión"
+                android:onClick="GestionLlanta"
+                android:background="#000000"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/LinearLayoutContrasena3"
+            android:paddingTop="5.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:textColor="@color/blanco"
+                android:layout_gravity="center"
+                android:id="@+id/buttonIntroducirMedidas"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dip"
+                android:text="Introducción de Medidas"
+                android:onClick="validarLogin"
+                android:background="#000000"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/LinearLayoutContrasena5"
+            android:paddingTop="5.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:textColor="@color/blanco"
+                android:layout_gravity="center"
+                android:id="@+id/buttonConfiguracion"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dip"
+                android:text="Configuración"
+                android:onClick="validarLogin"
+                android:background="#000000"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <Button
+            android:textColor="@color/blanco"
+            android:id="@+id/buttonIngresar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:text="Salir"
+            android:onClick="Salir"
+            android:background="#000000"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/Footer"
+        android:background="@color/grey_200"
+        android:padding="8.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:layout_alignParentBottom="true">
+
+        <TextView android:textSize="18.0sp"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:id="@+id/TextFooter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_footer"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>
